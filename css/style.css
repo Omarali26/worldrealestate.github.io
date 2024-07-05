@@ -43,6 +43,8 @@ menu {
 input {
     outline: none;
     border: none;
+    font-family: "Cairo", sans-serif;
+    font-weight: 700;
 }
 
 .logo a {
@@ -157,14 +159,56 @@ header {
     z-index: 999;
 }
 
-header .header {
+header .header > .search-bar {
+    display: none;
+}
+
+header .header .upper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header .header .navbar nav a:hover {
+header .header .upper .navbar nav a:hover {
     color: var(--orange);
+}
+
+header .header .upper .search-bar {
+    width: 600px;
+}
+
+header .header .search-bar form {
+    width: 100%;
+}
+
+header .header .search-bar form div {
+    width: 100%;
+}
+
+header .header .search-bar form div input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    color: var(--black-111);
+}
+
+@media (max-width: 768px) {
+    header .header > .search-bar {
+        display: block;
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    header .header .upper .search-bar {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    header .header .upper .search-bar {
+        width: 400px;
+    }
 }
 
 /* Header */
@@ -194,6 +238,12 @@ header .header .navbar nav a:hover {
 @media (max-width: 640px) {
     .hero {
         height: 30vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 155px;
     }
 }
 
