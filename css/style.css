@@ -193,7 +193,7 @@ header .header .navbar nav a:hover {
 
 @media (max-width: 640px) {
     .hero {
-        height: 25vh;
+        height: 30vh;
     }
 }
 
